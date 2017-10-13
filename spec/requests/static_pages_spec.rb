@@ -26,4 +26,11 @@ describe "Static Pages" do
     end
   end
 
+  describe "About Page" do
+    it "should have the content 'About'" do
+      visit '/static_pages/about'
+      expect(page).to have_content('Help')
+    end
+  end
+
 end
