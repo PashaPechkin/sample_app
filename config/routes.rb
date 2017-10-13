@@ -1,8 +1,9 @@
-#Маршрутизатор
-#Связывает действие(/действие) в КонтроленНейм(контроллер_нейм) с ВЬЮ (View)
+#Маршрутизатор.
+#Связывает ДЕЙСТВИЕ(/действие) в КЛАССЕ КонтроленНейм(контроллер_нейм) с ВЬЮ (View)
 #Создает страницу по адресу
 #В НАШЕМ  СЛУЧАЕ
-#Вызывает ДЕЙСТВИЕ /home в КОНТРОЛЛЕРЕ StaticPagesController(static_pages) с ВЬЮ home(static_pages)
+#Вызывает ДЕЙСТВИЕ GET.../home в КОНТРОЛЛЕРЕ (Классе) StaticPagesController(static_pages) с ВЬЮ home(static_pages)
+
 
 Rails.application.routes.draw do
   get 'static_pages/home'
