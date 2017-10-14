@@ -18,31 +18,44 @@ describe "Static Pages" do
       expect(page).to have_content('Sample App')
     end
     it "should have the right title" do
-    visit '/static_pages/home'
-    expect(page).to have_title("Ruby on Rails Tutorial Sample App | Home")
+      visit '/static_pages/home'
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Home")
+    end
   end
-end
 
   describe "Help Page" do
     it "should have the right title" do
-  visit '/static_pages/help'
-  expect(page).to have_title("Ruby on Rails Tutorial Sample App | Help")
-end
+      visit '/static_pages/help'
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Help")
     end
     it "should have the content 'Help'" do
       visit '/static_pages/help'
       expect(page).to have_content('Help')
+    end
   end
 
   describe "About Page" do
     it "should have the right title" do
-  visit '/static_pages/about'
-  expect(page).to have_title("Ruby on Rails Tutorial Sample App | About")
-end
+      visit '/static_pages/about'
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | About")
     end
     it "should have the content 'About'" do
       visit '/static_pages/about'
       expect(page).to have_content('About')
+    end
   end
 
+
+  describe "Contact page" do
+    it "should have the right title" do
+      visit 'static_pages/contact'
+      #проверка на шаблон
+      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Contact me")
+    end
+  it "should have the content 'Contact me'" do
+    visit '/static_pages/contact'
+    #Проверка на вью
+    expect(page).to have_content('Contact me')
+  end
+end
 end
